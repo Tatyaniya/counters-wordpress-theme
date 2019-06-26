@@ -53,27 +53,6 @@ get_header();
         <h2 class="title-2 catalog__title">
             <?php the_field('catalog'); ?>
         </h2>
-
-        
-
-        <ul class="games__list games__list_free">
-                    <?php// $pc = new WP_Query('cat=5&posts_per_page=-1'); ?>
-                        <?php //while ($pc->have_posts()) : $pc->the_post(); ?>
-                            <li class="games__item">
-                                <div class="games__content games__content_free">
-                                    <div class="games__img">
-                                        <?php //the_post_thumbnail(array(159,197), array("class" => "post_thumbnail", "alt" => get_the_title()));  ?>
-                                    </div>
-                                    <?php //the_content(); ?>
-                                </div>
-                                <div class="games__subtitle">
-                                    <?php //the_title(); ?>
-                                </div>
-                            </li>
-                        <?php //endwhile;
-                        //wp_reset_postdata();
-                    ?>
-                </ul>
         <ul class="catalog__list">
 
             <?php $counter = new WP_Query( array(
@@ -129,12 +108,9 @@ get_header();
         </h2>
         <div class="order__content">
             <div class="order__form">
-                <form action="#">
-                    <input class="order__input" type="text" name="name" placeholder="Имя" required>
-                    <input class="order__input" type="text" name="phone" placeholder="Телефон" required>
-                    <input class="order__input order__input--last" type="text" name="counter" placeholder="Какой счетчик выбрали?">
-                    <button type="submit" class="form-submit" data-submit>Заказать товар</button>
-                </form>
+
+                <?php echo do_shortcode('[contact-form-7 id="122" title="Контактная форма на главной странице"]'); ?>
+                
             </div>
             <?php if ($counters_options['formimage']) { ?>
                 <div class="order__img">

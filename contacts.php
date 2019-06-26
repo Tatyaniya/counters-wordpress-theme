@@ -12,8 +12,16 @@ get_header();
             <h2 class="title-2">
                 <?php echo $counters_options['title-map']; ?>
             </h2>
+
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4368670046306!2d30.445245215731422!3d50.45158907947544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc259a110735%3A0xa9dd0e2c92e208f2!2z0YPQuy4g0KHQvNC-0LvQtdC90YHQutCw0Y8sIDEwLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1560802274740!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <?php while ( have_posts() ) : the_post();
+
+                    the_content();
+
+                    endwhile; 
+                    wp_reset_postdata();
+                ?>
+                
             </div>
         </div>
         <div class="info">

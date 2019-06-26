@@ -120,11 +120,9 @@ global $counters_options;
                 Заказать звонок
             </div>
             <div class="modal__form">
-                <form action="#">
-                    <input type="text" class="modal__input" name="name" placeholder="Имя" required>
-                    <input class="modal__input" type="text" name="phone" placeholder="Телефон" required>
-                    <button type="submit" class="modal-submit" data-submit>Отправить заявку</button>
-                </form>
+
+                <?php echo do_shortcode('[contact-form-7 id="131" title="Форма модального окна"]'); ?>
+               
             </div>
         </div>
     </div>

@@ -543,7 +543,7 @@ input::placeholder {
     font-weight: 300;
 }
 
-.choice__text {
+.choice__desc p {
     margin-bottom: 27px;
 }
 
